@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 function SingUp() {
     const [show, setShow] = useState(false)
     const [singUpError, setSingUpError] = useState('');
-    const { createUserWithEmail, uploadProfile, googlePopUp,  } = useContext(AuthContext);
+    const { createUserWithEmail, uploadProfile, googlePopUp, } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate()
 
@@ -114,17 +114,21 @@ function SingUp() {
                     />
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 relative">
                     <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
                         Password:
                     </label>
                     <input
-                        type="password"
+                        type={show ? "text" : "password"}
                         name="password"
                         className="w-full border border-gray-300 p-2 rounded"
                         required
                     />
+                     <span onClick={() => setShow(!show)} className="absolute right-5 top-[40px] cursor-pointer">{show ? <FaEyeSlash /> : <FaEye />}</span>
                 </div>
+                {
+                    singUpError && <p className="text-red-700 pb-4">{singUpError}</p>
+                }
 
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 w-full">
                     Sign Up

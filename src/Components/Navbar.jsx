@@ -1,13 +1,34 @@
+import { useContext} from "react";
 import { NavLink } from "react-router-dom"
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 function Navbar() {
+    const { user, logOut } = useContext(AuthContext);
+    const photo = user?.photoURL;
+    const name = user?.displayName;
+
+
+    const handleSingOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const navLinks = < >
         <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Home</NavLink></li>
         <li><NavLink to="/addProduct" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Add Product</NavLink></li>
         <li><NavLink to="/myCart" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>My Cart</NavLink></li>
-        <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Login
-        </NavLink></li>
+        {
+            user && <li className="lg:inline-flex items-center hidden">
+                <img className="inline h-14 w-auto rounded-full" src={photo} alt="" />
+                {name}
+            </li>
+        }
+        {
+            user ? <li><button className="bg-red-700 text-white" onClick={handleSingOut}>Log out </button></li> : <li><NavLink to="/login" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Login
+            </NavLink></li>
+        }
     </>
     return (
         <div className="mb-20 relative z-40">
@@ -23,8 +44,16 @@ function Navbar() {
                     </div>
                     <img className="hidden md:block h-20" src="https://i.ibb.co/x6td5rt/Screenshot-2023-10-18-160347.png" alt="" />
                 </div>
+                <div className="navbar-center md:hidden ">
+                    {
+                        user && <li className="inline-flex items-center flex-col">
+                            <img className="inline h-10 w-auto rounded-full" src={photo} alt="" />
+                            {name}
+                        </li>
+                    }
+                </div>
                 <div className="navbar-end hidden md:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 flex items-center">
                         {navLinks}
                     </ul>
                 </div>
