@@ -12,6 +12,7 @@ import AddProduct from "./Pages/AddProduct";
 import Cart from "./Pages/Cart";
 import SingIn from "./Pages/SingIn";
 import SingUp from "./Pages/SingUp";
+import AuthProvider from "./Provider/AuthProvider";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
