@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "address": "123 Main Street, City, Country",
+    "img": "https://5.imimg.com/data5/FM/PY/JV/SELLER-25713058/img-20190318-wa0017-500x500.JPG",
+    "description": "Experience the latest in technology at this cutting-edge electronics showcase. Explore the future of gadgets and innovation at our tech-driven event."
+  },
+  {
+    "id": 2,
+    "address": "456 Elm Avenue, Town, Country",
+    "img": "https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/shutterstock_1445581070.jpg",
+    "description": "Unleash your inner tech hero at this electronics extravaganza. Suit up in your favorite tech-inspired attire and prepare for an adventure in the digital world."
+  },
+  {
+    "id": 3,
+    "address": "789 Oak Road, Village, Country",
+    "img": "https://www.apple.com/newsroom/images/live-action/new-store-opening/Apple-Saket-Delhi-India-media-preview-hero_Full-Bleed-Image.jpg.slideshow-xlarge_2x.jpg",
+    "description": "Immerse yourself in the world of high-tech wonders. Join us for a celebration of Apple's latest innovations, complete with hands-on experiences and exciting product launches."
+  },
+  {
+    "id": 4,
+    "address": "101 Pine Lane, Beach Town, Country",
+    "img": "https://i0.wp.com/nasilemaktech.com/wp-content/uploads/2022/07/Intel-Powered-Store-Pavilion-Bukit-Jalil.jpg",
+    "description": "Catch the wave of technological progress at this beachfront tech fest. Dive into a world of innovation and enjoy beachside tech talks and interactive exhibitions."
+  },
+  {
+    "id": 5,
+    "address": "222 Cherry Street, Mountain Town",
+    "img": "https://brandbazaarbd.com/image/cache/catalog/2021/08/Sony-Bangladesh-BrandBazaarBD-600x315w.jpg",
+    "description": "Elevate your birthday with a tech-themed adventure in the mountains. Go on a journey to discover the latest electronic gadgets and explore the future of tech in the great outdoors."
+  },
+  {
+    "id": 6,
+    "address": "333 Maple Avenue, Lakeside, Country",
+    "img": "https://img.global.news.samsung.com/in/wp-content/uploads/2022/09/saket.jpg",
+    "description": "Embark on a high-tech voyage with a nautical twist. Cruise into the world of Samsung's latest innovations, accompanied by boat rides, tech-inspired seafood feasts, and a waterfront celebration."
+  }
+]

@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "img": "https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1695365793586/fd2574975f45b0b23340355de6454465.png",
+      "originalPrice": 99.99,
+      "discountPrice": 79.99,
+      "discountPercentage": "20%",
+      "productName": "Vevo Y17s"
+    },
+    {
+      "id": 2,
+      "img": "https://mobilebazar.com.bd/assets/img/Google-Pixel-6-Pro.webp",
+      "originalPrice": 129.99,
+      "discountPrice": 109.99,
+      "discountPercentage": "15%",
+      "productName": "Pixel 6 Pro"
+    },
+    {
+      "id": 3,
+      "img": "https://www.cloud.ryanscomputers.com/cdn/products/main/intel-13th-gen-raptor-lake-core-i5-13400-lga1700-11671363439.webp",
+      "originalPrice": 49.99,
+      "discountPrice": 39.99,
+      "discountPercentage": "20%",
+      "productName": "Intel core i5 Processor"
+    },
+    {
+      "id": 4,
+      "img": "https://www.sony-asia.com/image/2d257668b46d3cd5be228192fd02876f?fmt=pjpeg&resMode=bisharp&wid=354",
+      "originalPrice": 79.99,
+      "discountPrice": 59.99,
+      "discountPercentage": "25%",
+      "productName": "SONY DCR-SX21E "
+    }
+  ]
+  

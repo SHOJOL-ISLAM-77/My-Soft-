@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+      "image": "https://i.ibb.co/yp7dqKT/vecteezy-apple-black-logo-on-transparent-background-14414658.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "image": "https://i.ibb.co/8cM5CgX/pngimg-com-samsung-logo-PNG14.png"
+    },
+    {
+      "id": 3,
+      "name": "Sony",
+      "image": "https://i.ibb.co/pvrpNx6/pngwing-com.png"
+    },
+    {
+      "id": 4,
+      "name": "Intel",
+      "image": "https://i.ibb.co/18ZTScD/pngwing-com-1.png"
+    },
+    {
+      "id": 5,
+      "name": "Google",
+      "image": "https://i.ibb.co/RNz3Z8m/m011t0447-b-social-sign-18sep22.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Vevo",
+      "image": "https://i.ibb.co/k12H7bR/pngwing-com-2.png"
+    }
+  ]
+  
