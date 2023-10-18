@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "./Provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
-import { Dna } from 'react-loader-spinner'
 import PropTypes from 'prop-types';
+import { Dna } from "react-loader-spinner";
 
 
 

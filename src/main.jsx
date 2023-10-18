@@ -13,6 +13,7 @@ import Cart from "./Pages/Cart";
 import SingIn from "./Pages/SingIn";
 import SingUp from "./Pages/SingUp";
 import AuthProvider from "./Provider/AuthProvider";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path: "/myCart",
