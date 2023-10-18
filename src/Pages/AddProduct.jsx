@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 
 function AddProduct() {
@@ -11,7 +12,29 @@ function AddProduct() {
     const type = form.type.value;
     const image = form.image.value;
     const shortDescription = form.shortDescription.value;
-    console.log(name, brand, price, rating, type, image, shortDescription, form);
+
+    const newProduct = {name,brand,price, rating, type, image, shortDescription}
+
+    console.log(newProduct);
+
+    fetch('http://localhost:7000/product',{
+      method: 'POST',
+      headers:{
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newProduct)
+    })
+    .then(res=> res.json())
+    .then(data => {
+      if (data.acknowledged) {
+        Swal.fire(
+          'Good job!',
+          'Product add successfully!',
+          'success'
+        )
+        form.reset();
+      }
+    })
   }
 
 
@@ -37,16 +60,15 @@ function AddProduct() {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="brand">
-                Brand Name
-              </label>
-              <input
-                required
-                type="text"
-                name="brand"
-                className="w-full p-2 border rounded"
-                placeholder="Brand Name"
-              />
+              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand Name</label>
+              <select required name="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option defaultValue='Apple'>Apple</option>
+                <option defaultValue='Intel'>Intel</option>
+                <option defaultValue='Google'>Google</option>
+                <option defaultValue='Vevo'>Vevo</option>
+                <option defaultValue='Sony'>Sony</option>
+                <option defaultValue='Samsung'>Samsung</option>
+              </select>
             </div>
             <div className="mb-4">
               <label className="block text-gray-700 font-medium mb-2" htmlFor="price">
@@ -77,10 +99,12 @@ function AddProduct() {
             <div className="mb-4 col-span-2">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type</label>
               <select name="type" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option  defaultValue='Computer'>Computer</option>
+                <option defaultValue='Computer'>Computer</option>
                 <option defaultValue='Phone'>Phone</option>
                 <option defaultValue='Laptop'>Laptop</option>
-                <option defaultValue='Google device'>Google devices</option>
+                <option defaultValue='Watch'>Watch</option>
+                <option defaultValue='Head Phone'>Head Phone</option>
+                <option defaultValue='Monitor'>Monitor</option>
                 <option defaultValue='Other'>Other</option>
               </select>
             </div>

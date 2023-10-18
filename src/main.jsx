@@ -14,6 +14,7 @@ import SingIn from "./Pages/SingIn";
 import SingUp from "./Pages/SingUp";
 import AuthProvider from "./Provider/AuthProvider";
 import PrivateRoute from "./PrivateRoute";
+import ShowBrand from "./Pages/ShowBrand";
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myCart",
-        element: <Cart></Cart>
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>
       },
       {
         path: "/login",
@@ -41,6 +42,13 @@ const router = createBrowserRouter([
       {
         path: '/singUp',
         element: <SingUp></SingUp>
+      },
+      {
+        path: '/showBrand/:brand',
+        element: <PrivateRoute><ShowBrand></ShowBrand></PrivateRoute>,
+        loader: ({ params }) => {
+          return fetch(`http://localhost:7000/product/${params.brand}`);
+        },
       }
     ]
   },
