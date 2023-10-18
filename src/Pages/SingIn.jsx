@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom"
 
 
 function SingIn() {
+
   return (
     <div>
       <div className="w-full max-w-xs md:max-w-md py-48 mx-auto">
@@ -24,7 +26,7 @@ function SingIn() {
                         Sign In
                     </button>
                     <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 tracking-wide" href="#">
-                        don't have an account? <span className="underline">please Sing Up</span>
+                        don't have an account? <Link to="/singUp" className="underline">please Sing Up</Link>
                     </a>
                 </div>
             </form>

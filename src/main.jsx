@@ -11,6 +11,7 @@ import ErrorPage from "./error-page";
 import AddProduct from "./Pages/AddProduct";
 import Cart from "./Pages/Cart";
 import SingIn from "./Pages/SingIn";
+import SingUp from "./Pages/SingUp";
 
 
 const router = createBrowserRouter([
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
         element: <Cart></Cart>
       },
       {
-        path: "login",
+        path: "/login",
         element: <SingIn></SingIn>
+      },
+      {
+        path: '/singUp',
+        element: <SingUp></SingUp>
       }
     ]
   },
