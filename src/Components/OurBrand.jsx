@@ -31,4 +31,4 @@ function OurBrand() {
     )
 }
 
-export default OurBrand
+export default OurBrand;

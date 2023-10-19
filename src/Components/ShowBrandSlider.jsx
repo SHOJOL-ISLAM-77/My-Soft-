@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Carousel = ({ details }) => {
-    console.log(details);
 
     const settings = {
         dots: true,
@@ -13,7 +12,7 @@ const Carousel = ({ details }) => {
         autoplay: true,
         autoplaySpeed: 1000,
         slidesToShow: 3,
-        slidesToScroll: 0.5,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 768,
@@ -40,16 +39,16 @@ const Carousel = ({ details }) => {
     };
 
     return (
-        <div className="bg-gray-100 p-4">
+        <div className="bg-gray-100 mx-4">
             <h2 className="text-6xl font-bold text-center border-b-2 pb-4">Discounts !!!</h2>
             <div className="mx-auto max-w-screen-lg">
                 <Slider {...settings}>
                     {details?.map(discount => (
-                        <div key={discount.id} className="p-4">
-                            <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div key={discount._id} className="p-4 cursor-pointer">
+                            <div className="max-w-sm mx-auto bg-white h-96 shadow-lg rounded-lg overflow-hidden">
                                 <div className="relative h-[300px]">
                                     <img
-                                        className="w-full h-full object-cover"
+                                        className=" object-cover"
                                         src={discount.image}
                                         alt="Product Image"
                                     />
