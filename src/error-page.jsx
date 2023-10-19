@@ -1,5 +1,4 @@
 import { Link, useRouteError } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -14,7 +13,7 @@ export default function ErrorPage() {
             </p>
             <p className="text-3xl">Sorry, an unexpected error has occurred.</p>
             
-            <Link to="/"><Button variant="outlined">Go Home</Button></Link>
+            <Link to="/"><button className="btn btn-success text-white">Go Home</button></Link>
         </div>
     );
 }

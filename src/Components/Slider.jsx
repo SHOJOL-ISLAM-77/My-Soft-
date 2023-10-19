@@ -17,9 +17,9 @@ const Carousel = () => {
     infinite: true,
     speed: 1000,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 0.3,
     responsive: [
       {
         breakpoint: 768,
@@ -47,7 +47,7 @@ const Carousel = () => {
 
   return (
     <div className="bg-gray-100 p-4">
-      <h2 className="text-6xl font-bold text-center border-b-2 pb-4">Discounts !!!</h2>
+      <h2 className="md:text-6xl text-2xl font-bold text-center border-b-2 pb-4">Our up coming products !!!</h2>
       <div className="mx-auto max-w-screen-lg">
         <Slider {...settings}>
           {discounts.map(discount => (
@@ -60,13 +60,12 @@ const Carousel = () => {
                     alt="Product Image"
                   />
                   <div className="absolute top-0 right-0 bg-red-500 text-white p-2 font-semibold rounded-tr-lg rounded-bl-lg">
-                    {discount?.discountPercentage} off
+                    date: {discount.date}
                   </div>
                 </div>
                 <div className="px-6 py-4">
                   <h3 className="text-xl font-semibold mb-2">{discount.productName}</h3>
-                  <span className="text-gray-700 text-base">Original Price: ${discount?.originalPrice}</span>
-                  <div className="text-2xl font-bold text-red-500">${discount?.discountPrice}</div>
+                  <span className="text-gray-700 text-base">Price: ${discount?.originalPrice}</span>
                 </div>
               </div>
             </div>

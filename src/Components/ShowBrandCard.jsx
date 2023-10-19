@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 
 
 const ShowBrandCard = ({ data }) => {
-    
-    const {name,brand,price,rating,type,image,shortDescription } = data;
+
+    const { name, brand, price, rating, type, image } = data;
     return (
-        <div className="w-64 bg-white rounded-lg shadow-lg border">
-            <img src={image} alt="Product Image" className="w-full h-[300px]  rounded-t-lg" />
+        <div className="w-64 bg-white rounded-lg shadow-lg border mx-auto">
+            <img src={image} alt="Product Image" className="w-full h-[250px] rounded-t-lg" />
 
             <div className="p-4 ">
                 <h2 className="text-lg font-semibold">{name}</h2>

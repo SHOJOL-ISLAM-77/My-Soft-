@@ -1,6 +1,6 @@
 import Banner from '../Components/Banner'
 import OurBrand from '../Components/OurBrand'
-import OurDiscount from '../Components/OurDiscount'
+import OurDiscount from '../Components/OurCommingProducts'
 import WeAer from '../Components/WeAre';
 
 function Home() {

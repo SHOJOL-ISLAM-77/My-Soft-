@@ -12,10 +12,10 @@ function OurBrand() {
     }, [])
 
     return (
-        <div className="my-20 relative z-0">
+        <div className="my-10 md:my-20 relative z-0">
             <h2 className='text-4xl md:text-6xl text-center font-extrabold'>Our Brands </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-20 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 md:my-20 gap-10">
                 {
                     brands.map(brand => <Link  key={brand.id}  to={`/showBrand/${brand.name}`}>
                     <div className="card xl:w-96 w-3/4 mx-auto  shadow-2xl border cursor-pointer">
