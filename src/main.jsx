@@ -34,8 +34,11 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
-        path: "/myCart",
-        element: <PrivateRoute><Cart></Cart></PrivateRoute>
+        path: "/cartData/:userName",
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+        loader: ({params})=>{
+          return fetch(`http://localhost:7000/cartData/${params.userName}`)
+        }
       },
       {
         path: "/login",

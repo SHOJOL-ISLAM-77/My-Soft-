@@ -17,9 +17,9 @@ const ShowBrand = () => {
                         }
                     </div>
                 </div> : <div className="h-[450px] text-center">
-                    <h1 className="text-7xl my-7 mt-32 text-center">Search No Result</h1>
+                    <h1 className="text-7xl my-7 mt-32 text-center">Search No Result Found</h1>
 
-                    <p className="text-xl">We are sorry. I will add products very soon</p>
+                    <p className="text-xl">We are sorry. We will add products very soon</p>
                     <Link to="/"><button className="btn btn-primary my-10">Go Home</button></Link>
 
                 </div>

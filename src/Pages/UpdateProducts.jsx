@@ -28,14 +28,18 @@ const UpdateProducts = () => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data);
+                
                 if (data.acknowledged) {
-                    form.reset();
+                    
                     Swal.fire(
                         'Good job!',
                         'Product add successfully!',
                         'success'
                     )
+                    form.reset();
                 }
+                
             })
     }
 

@@ -1,18 +1,39 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import StarRatings from "react-star-ratings";
+import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const ShowProductDetails = () => {
 
+    const {user} = useContext(AuthContext)
     const detailsData = useLoaderData();
-    console.log(detailsData);
-    const { name, brand, type, shortDescription, rating, image } = detailsData;
-
+    const { name, brand, type, shortDescription, rating, image, price } = detailsData;
     const [rat] = useState(parseInt(rating));
+    const userName = user.displayName;
 
 
     const handleAddToCart = () => {
+         
+        const cartData = {name, brand, type, shortDescription, rating, image, userName, price}
 
+        fetch('http://localhost:7000/cartData', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(cartData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    Swal.fire(
+                        'Good job!',
+                        'Product add successfully!',
+                        'success'
+                    )
+                }
+            })
     }
 
     return (
@@ -31,6 +52,7 @@ const ShowProductDetails = () => {
                                 name="rating"
                             />
                         </div>
+                        <p className="text-3xl ">Price: <span className="font-semibold ">$ {price}</span></p>
                         <p className="text-3xl ">Type: <span className="font-semibold underline">{type}</span></p>
                         <div>
                             <h3 className="text-xl font-bold ">About this product:</h3>

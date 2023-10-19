@@ -43,12 +43,12 @@ const Carousel = ({ details }) => {
             <h2 className="text-6xl font-bold text-center border-b-2 pb-4">Discounts !!!</h2>
             <div className="mx-auto max-w-screen-lg">
                 <Slider {...settings}>
-                    {details?.map(discount => (
+                    {details?.slice(0,5)?.map(discount => (
                         <div key={discount._id} className="p-4 cursor-pointer">
                             <div className="max-w-sm mx-auto bg-white h-96 shadow-lg rounded-lg overflow-hidden">
                                 <div className="relative h-[300px]">
                                     <img
-                                        className=" object-cover"
+                                        className=" h-full w-full m-auto"
                                         src={discount.image}
                                         alt="Product Image"
                                     />
@@ -56,10 +56,7 @@ const Carousel = ({ details }) => {
                                         Go for discount
                                     </div>
                                 </div>
-                                <div className="px-6 py-4">
-                                    <h3 className="text-xl font-semibold mb-2">{discount.name}</h3>
-                                    <span className="text-gray-700 text-base">Original Price: ${discount?.price}</span>
-                                </div>
+                               
                             </div>
                         </div>
                     ))}

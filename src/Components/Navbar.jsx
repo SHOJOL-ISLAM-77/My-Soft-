@@ -5,6 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 function Navbar() {
     const { user, logOut } = useContext(AuthContext);
+    const userName = user?.displayName;
     const photo = user?.photoURL;
     const name = user?.displayName;
 
@@ -18,7 +19,7 @@ function Navbar() {
     const navLinks = < >
         <li><NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Home</NavLink></li>
         <li><NavLink to="/addProduct" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>Add Product</NavLink></li>
-        <li><NavLink to="/myCart" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>My Cart</NavLink></li>
+        <li><NavLink to={`/cartData/${userName}`} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-white bg-black" : ""}>My Cart</NavLink></li>
         {
             user && <li className="lg:inline-flex items-center hidden">
                 <img className="inline h-14 w-auto rounded-full" src={photo} alt="" />
