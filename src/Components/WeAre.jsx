@@ -9,7 +9,7 @@ const WeAer = () => {
         .then(data=> setCards(data))
     },[])
     return (
-        <div className="bg-gradient-to-bl from-purple-300 via-orange-200 to-red-200">
+        <div className="">
            <h2 className="md:text-5xl text-3xl text-center py-7 gradient-text font-semibold">
                     Where is mine to you</h2>
             <div className="text-gray py-16 container mx-auto">

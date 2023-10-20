@@ -39,8 +39,8 @@ function AddProduct() {
 
 
   return (
-    <div className="bg-gray-100 p-8">
-      <div className="max-w-xl mx-auto bg-white p-8 rounded shadow-md">
+    <div className="bg-base-100 p-8">
+      <div className="max-w-xl mx-auto bg-base-300 p-8 rounded shadow-md">
         <h2 className="text-2xl font-bold mb-4">Add Product</h2>
 
         <form onSubmit={handleAddProducts}>
@@ -60,8 +60,8 @@ function AddProduct() {
             </div>
 
             <div className="mb-4 col-span-2 sm:col-span-1">
-              <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand Name</label>
-              <select required name="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <label className="block mb-2 text-sm font-medium ">Brand Name</label>
+              <select required name="brand" className=" text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 <option defaultValue='Apple'>Apple</option>
                 <option defaultValue='Intel'>Intel</option>
                 <option defaultValue='Google'>Google</option>
@@ -71,7 +71,7 @@ function AddProduct() {
               </select>
             </div>
             <div className="mb-4 col-span-2 sm:col-span-1">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="price">
+              <label className="block  font-medium mb-2" htmlFor="price">
                 Price
               </label>
               <input
@@ -84,7 +84,7 @@ function AddProduct() {
             </div>
 
             <div className="mb-4 col-span-2 sm:col-span-1">
-              <label className="block text-gray-700 font-medium mb-2" htmlFor="rating">
+              <label className="block font-medium mb-2" htmlFor="rating">
                 Rating
               </label>
               <input
@@ -98,7 +98,7 @@ function AddProduct() {
             </div>
             <div className="mb-4 col-span-2">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type</label>
-              <select name="type" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              <select name="type" className=" text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option defaultValue='Computer'>Computer</option>
                 <option defaultValue='Phone'>Phone</option>
                 <option defaultValue='Laptop'>Laptop</option>

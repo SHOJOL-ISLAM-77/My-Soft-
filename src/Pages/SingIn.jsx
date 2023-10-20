@@ -38,11 +38,11 @@ function SingIn() {
 
     return (
 
-        <div className="max-w-md mx-auto p-6 bg-white rounded shadow-md my-48 border">
+        <div className="max-w-md mx-auto p-6 bg-base rounded shadow-md my-48 border">
             <h1 className="text-2xl font-bold mb-6">Sign In</h1>
             <form onSubmit={handleLogin}>
                 <div className="mb-4">
-                    <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+                    <label htmlFor="email" className="block text-sm font-bold mb-2">
                         Email:
                     </label>
                     <input
@@ -53,7 +53,7 @@ function SingIn() {
                     />
                 </div>
                 <div className="mb-4 relative">
-                    <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+                    <label htmlFor="password" className="block text-sm font-bold mb-2">
                         Password:
                     </label>
                     <input

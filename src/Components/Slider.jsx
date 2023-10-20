@@ -46,7 +46,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="bg-gray-100 p-4">
+    <div className=" border-4 rounded-lg bg-base-100 p-4">
       <h2 className="md:text-6xl text-2xl font-bold text-center border-b-2 pb-4">Our up coming products !!!</h2>
       <div className="mx-auto max-w-screen-lg">
         <Slider {...settings}>

@@ -14,7 +14,7 @@ const WeAreCard = ({ cardData }) => {
     }
     return (
         <div>
-            <div className="card lg:w-96 w-80 bg-base-100 shadow-xl mx-auto ">
+            <div className="card lg:w-96 w-80 bg-base-100 shadow-2xl mx-auto border-2">
                 <div className="card-body">
                     <div className='flex items-center gap-4'>
                         <h2 className="card-title inline tracking-[0px] md:text-lg lg:text-xl text-base"><span className='underline'>Our Address : <br /></span> {address}</h2>

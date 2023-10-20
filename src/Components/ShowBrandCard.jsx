@@ -11,8 +11,8 @@ const ShowBrandCard = ({ data }) => {
     const [rat] = useState(parseInt(rating));
 
     return (
-        <div className="w-64 md:w-80 bg-white rounded-lg shadow-lg border mx-auto">
-            <img src={image} alt="Product Image" className="w-full h-[250px] rounded-t-lg" />
+        <div className="w-64 md:w-80 bg-base-300 rounded-lg shadow-lg border mx-auto">
+            <img src={image} alt="Product Image" className="w-full h-[250px] rounded-t-lg p-3" />
 
             <div className="p-4 ">
                 <h2 className="text-lg font-semibold">{name}</h2>

@@ -39,9 +39,9 @@ const Carousel = ({ details }) => {
     };
 
     return (
-        <div className="bg-gray-100 mx-4">
+        <div className="bg-base-100 mx-4">
             <h2 className="text-6xl font-bold text-center border-b-2 pb-4">Discounts !!!</h2>
-            <div className="mx-auto max-w-screen-lg px-6">
+            <div className="mx-auto max-w-screen-lg px-6 border-2">
                 <Slider {...settings}>
                     {details?.slice(0,5)?.map(discount => (
                         <div key={discount._id} className=" p-4 cursor-pointer">
