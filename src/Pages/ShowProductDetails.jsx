@@ -17,7 +17,7 @@ const ShowProductDetails = () => {
 
         const cartData = { name, brand, type, shortDescription, rating, image, userName, price }
 
-        fetch('https://mysoft-server-side.vercel.app/cartData', {
+        fetch('https://mysoft-server-side.vercel.app/product/Apple/cartData', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

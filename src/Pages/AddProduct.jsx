@@ -15,8 +15,6 @@ function AddProduct() {
 
     const newProduct = { name, brand, price, rating, type, image, shortDescription }
 
-    console.log(newProduct);
-
     fetch('https://mysoft-server-side.vercel.app/product', {
       method: 'POST',
       headers: {
