@@ -51,7 +51,7 @@ const UpdateProducts = () => {
                 <form onSubmit={handleAddProducts}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                        <div className="mb-4">
+                        <div className="mb-4 col-span-2 sm:col-span-1">
                             <label className="block text-gray-700 font-medium mb-2" htmlFor="name">
                                 Name
                             </label>
@@ -65,7 +65,7 @@ const UpdateProducts = () => {
                             />
                         </div>
 
-                        <div className="mb-4">
+                        <div className="mb-4  col-span-2 sm:col-span-1">
                             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand Name</label>
                             <select defaultValue={brand} required name="brand" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option defaultValue='Apple'>Apple</option>
@@ -76,7 +76,7 @@ const UpdateProducts = () => {
                                 <option defaultValue='Samsung'>Samsung</option>
                             </select>
                         </div>
-                        <div className="mb-4">
+                        <div className="mb-4  col-span-2 sm:col-span-1">
                             <label className="block text-gray-700 font-medium mb-2" htmlFor="price">
                                 Price
                             </label>
@@ -90,7 +90,7 @@ const UpdateProducts = () => {
                             />
                         </div>
 
-                        <div className="mb-4">
+                        <div className="mb-4 col-span-2 sm:col-span-1">
                             <label className="block text-gray-700 font-medium mb-2" htmlFor="rating">
                                 Rating
                             </label>

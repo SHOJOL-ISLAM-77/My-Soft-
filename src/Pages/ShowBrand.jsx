@@ -11,7 +11,7 @@ const ShowBrand = () => {
                 data.length > 0 ? <div>
                     <Carousel details={data}></Carousel>
                     <h1 className="text-2xl md:text-7xl my-11 mt-32 text-center">Our {data.length} products</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10  mx-auto">
                         {
                             data?.map(card => <ShowBrandCard key={card._id} data={card}></ShowBrandCard>)
                         }
