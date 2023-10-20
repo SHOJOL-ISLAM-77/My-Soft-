@@ -24,12 +24,17 @@ function Cart() {
 
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:7000/cartData/${id}`, {
+    fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/cartData/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire(
+      'Good job!',
+      'Product add successfully!',
+      'success'
+    )
         const filter = deleteData.filter((item) => item._id !== id);
         setDeleteData(filter)
       });

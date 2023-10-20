@@ -19,7 +19,7 @@ const UpdateProducts = () => {
 
         const newProduct = { name, brand, price, rating, type, image, shortDescription }
 
-        fetch(`http://localhost:7000/product/${_id}`, {
+        fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -17,7 +17,7 @@ const ShowProductDetails = () => {
 
         const cartData = { name, brand, type, shortDescription, rating, image, userName, price }
 
-        fetch('http://localhost:7000/cartData', {
+        fetch('https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/cartData', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
