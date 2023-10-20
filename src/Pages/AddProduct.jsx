@@ -17,7 +17,7 @@ function AddProduct() {
 
     console.log(newProduct);
 
-    fetch('https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/product', {
+    fetch('https://mysoft-server-side.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

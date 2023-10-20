@@ -24,7 +24,7 @@ function Cart() {
 
 
   const handleDelete = (id) => {
-    fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/cartData/${id}`, {
+    fetch(`https://mysoft-server-side.vercel.app/cartData/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

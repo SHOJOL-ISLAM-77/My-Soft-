@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         path: "/cartData/:userName",
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
         loader: ({params})=>{
-          return fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/cartData/${params.userName}`)
+          return fetch(`https://mysoft-server-side.vercel.app/cartData/${params.userName}`)
         }
       },
       {
@@ -52,14 +52,14 @@ const router = createBrowserRouter([
         path: '/showBrand/:brand',
         element: <PrivateRoute><ShowBrand></ShowBrand></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/product/${params.brand}`);
+          return fetch(`https://mysoft-server-side.vercel.app/product/${params.brand}`);
         },
       },
       {
         path: '/showBrand/brandDetails/:id',
         element: <PrivateRoute><ShowProductDetails></ShowProductDetails></PrivateRoute>,
         loader: ({ params }) => {
-          return fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/productDetails/${params.id}`)
+          return fetch(`https://mysoft-server-side.vercel.app/productDetails/${params.id}`)
         }
       },
       {
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
         loader: ({ params }) => {
           console.log(params);
-          return fetch(`https://mysoft-server-side-mlm4no5ic-shojol-islams-projects.vercel.app/productDetails/${params.id}`)
+          return fetch(`https://mysoft-server-side.vercel.app/productDetails/${params.id}`)
         }
       }
     ]
