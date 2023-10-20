@@ -19,5 +19,5 @@ This project involves the creation of a unique and user-friendly e-commerce webs
 
 - **404 Page:** The website includes a custom 404 page for handling not-found errors, ensuring a smooth user experience.
 
-**Live Link:** [https://quickest-chance.surge.sh/]
+**Live Link:** [https://mysoft-8e086.firebaseapp.com/]
 
