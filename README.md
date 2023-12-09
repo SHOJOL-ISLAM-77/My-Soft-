@@ -19,5 +19,31 @@ This project involves the creation of a unique and user-friendly e-commerce webs
 
 - **404 Page:** The website includes a custom 404 page for handling not-found errors, ensuring a smooth user experience.
 
-**Live Link:** [https://mysoft-8e086.firebaseapp.com/]
 
+
+## Key Features
+
+- **Navbar**: Includes website name with logo, Home, Add Product, My Cart, and Login sections.
+- **Homepage**: Features a navbar, banner, footer, and displays at least 6 brand names with respective images.
+- **Additional Sections**: Two extra sections incorporated on the homepage to enrich user experience.
+- **Add Product Page**: A private route facilitating users to add new products with essential details like image, name, brand, type, price, and more.
+- **Brand-Specific Pages**: Clicking on a brand redirects users to a page exhibiting products of that brand, including a slider with ads and at least 4 products.
+- **Product Details**: Each product route displays comprehensive details and includes an "Add to Cart" feature.
+- **Cart Management**: Private route allowing users to view and delete added products from their cart.
+- **Product Update Page**: A private route enabling users to update product information.
+- **Authentication**: Implements email and password-based registration and login with error handling.
+- **Error Handling**: Displays specific errors for password criteria and mismatched credentials using Firebase alerts or toasts.
+- **Additional Login Option**: Offers an extra login choice (Facebook, GitHub, Google, etc.).
+- **User Profile & Logout**: Displays user name, profile picture, and logout button on successful login.
+- **404 Page**: Incorporates a "Not Found" page for invalid routes.
+  
+## Technologies Used
+
+- **Frontend**: Utilizes React for client-side development.
+- **Backend**: Employs Node.js and Express.js for server-side operations.
+- **Database**: MongoDB for efficient data storage.
+- **Authentication**: Firebase for user authentication and error messages.
+
+
+
+**Live Link:** [https://mysoft-8e086.firebaseapp.com/]
